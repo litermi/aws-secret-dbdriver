@@ -1,0 +1,38 @@
+{
+    "name": "litermi/aws-secret-dbdriver",
+    "description": "Easy db auth from aws secret manager",
+    "type": "library",
+    "license":      "MIT",
+    "require": {
+        "aws/aws-sdk-php": "^3.128",
+        "aws/aws-sdk-php-laravel": "^3.4",
+        "guzzlehttp/guzzle": "^6.4"
+    },
+    "authors": [
+        {
+            "name": "Diego",
+            "email": "diego.cotelo@litermi.com"
+        }
+    ],
+    "repositories": [
+        {
+          "type": "git",
+          "url": "https://github.com/litermi/aws-secret-dbdriver"
+        }
+      ],
+      "autoload": {
+        "psr-4": {
+            "litermi\\secretDBdriver\\": "src/",
+            "litermi\\secretDBdriver\\Providers\\": "src/providers/"
+        }
+    },
+      "extra": {
+        "laravel": {
+            "providers": [
+                "litermi\\secretDBdriver\\Providers\\DatabaseSecretProvider",
+                "litermi\\secretDBdriver\\Providers\\DatabaseServiceProvider"
+            ]
+        }
+    }
+}
+
